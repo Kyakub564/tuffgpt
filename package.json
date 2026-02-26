@@ -1,0 +1,1 @@
+{\n  "name": "tuffgpt",\n  "version": "1.0.0",\n  "description": "A Node.js project with Express and CORS dependencies",\n  "main": "index.js",\n  "scripts": {\n    "start": "node index.js"\n  },\n  "dependencies": {\n    "express": "^4.17.1",\n    "cors": "^7.2.1"\n  },\n  "author": "Kyakub564",\n  "license": "ISC"\n}
