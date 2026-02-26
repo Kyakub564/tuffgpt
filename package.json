@@ -1,16 +1,1 @@
-{
-  "name": "tuffgpt",
-  "version": "1.0.0",
-  "description": "TuffGPT - The AI for disciplined minds",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "keywords": ["ai", "chatbot"],
-  "author": "Kyakub564",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
-  }
-}
+{\n  "name": "tuffgpt",\n  "version": "1.0.0",\n  "description": "TuffGPT - The AI for disciplined minds",\n  "main": "server.js",\n  "scripts": {\n    "start": "node server.js",\n    "dev": "nodemon server.js"\n  },\n  "keywords": ["ai", "chatbot"],\n  "author": "Kyakub564",\n  "license": "ISC",\n  "dependencies": {\n    "express": "^4.18.2",\n    "cors": "^2.8.5"\n  },\n  "devDependencies": {\n    "nodemon": "^2.0.20"\n  }\n}
