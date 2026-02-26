@@ -1,37 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TuffGPT</title>
-    <link rel="stylesheet" href="style.css">
+  <title>TuffGPT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: #0a0a0a;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #111;
+    }
+
+    nav h2 {
+      color: #ff1a1a;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ff1a1a;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 60px;
+      color: #ff1a1a;
+      text-shadow: 0 0 20px red;
+    }
+
+    .subtitle {
+      color: #aaa;
+      margin-top: 10px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      background: linear-gradient(45deg,#ff0000,#990000);
+      border: none;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px red;
+    }
+
+    .features, .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      width: 250px;
+      border: 1px solid #1a1a1a;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #ff1a1a;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+    }
+
+    .price {
+      font-size: 30px;
+      color: #ff1a1a;
+      margin: 20px 0;
+    }
+
+    #chatSection {
+      padding: 80px 20px;
+      background: #050505;
+    }
+
+    #chatbox {
+      max-width: 800px;
+      margin: auto;
+      height: 50vh;
+      background: #111;
+      padding: 20px;
+      border-radius: 15px;
+      overflow-y: auto;
+      border: 1px solid #1a1a1a;
+    }
+
+    .input-area {
+      display: flex;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    input {
+      flex: 1;
+      padding: 15px;
+      background: #000;
+      border: 1px solid #222;
+      color: white;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .send-btn {
+      padding: 15px 30px;
+      background: red;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 12px;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>BUILT DIFFERENT</h1>
-    </header>
-    <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-    </section>
-    <section id="pricing">
-        <h2>Pricing</h2>
-        <p>Basic Plan: $10/month</p>
-        <p>Pro Plan: $30/month</p>
-    </section>
-    <section id="chat-interface">
-        <h2>Chat Interface</h2>
-        <div>
-            <input type="text" placeholder="Type your message here..." />
-            <button>Send</button>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2026 TuffGPT. All Rights Reserved.</p>
-    </footer>
+
+<nav>
+  <h2>TuffGPT</h2>
+  <div>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#chatSection">App</a>
+  </div>
+</nav>
+
+<section>
+  <h1>BUILT DIFFERENT</h1>
+  <div class="subtitle">The AI for disciplined minds.</div>
+  <button class="btn" onclick="document.getElementById('chatSection').scrollIntoView()">Start Now</button>
+</section>
+
+<section id="features">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Direct</h3>
+      <p>No fluff answers.</p>
+    </div>
+    <div class="card">
+      <h3>Strategic</h3>
+      <p>Execution-focused advice.</p>
+    </div>
+    <div class="card">
+      <h3>Powerful</h3>
+      <p>High-performance mindset AI.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing">
+    <div class="card">
+      <h3>Free</h3>
+      <div class="price">$0</div>
+      <p>Basic usage</p>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <div class="price">$19/mo</div>
+      <p>Unlimited access</p>
+    </div>
+    <div class="card">
+      <h3>Elite</h3>
+      <div class="price">$49/mo</div>
+      <p>Priority AI speed</p>
+    </div>
+  </div>
+</section>
+
+<section id="chatSection">
+  <h2>Try TuffGPT</h2>
+  <div id="chatbox"></div>
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Ask something powerful..." />
+    <button class="send-btn" onclick="sendMessage()">EXECUTE</button>
+  </div>
+</section>
+
+<footer>
+  © 2026 TuffGPT. Built Different.
+</footer>
+
+<script>
+async function sendMessage() {
+  const inputField = document.getElementById("userInput");
+  const chatbox = document.getElementById("chatbox");
+  const userMessage = inputField.value;
+
+  if (!userMessage) return;
+
+  chatbox.innerHTML += "<div><strong>You:</strong> " + userMessage + "</div>";
+  inputField.value = "";
+
+  const response = await fetch("/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userMessage })
+  });
+
+  const data = await response.json();
+  chatbox.innerHTML += "<div style='color:red'><strong>TuffGPT:</strong> " + data.reply + "</div>";
+  chatbox.scrollTop = chatbox.scrollHeight;
+}
+</script>
+
 </body>
 </html>
